@@ -1,24 +1,24 @@
 package example.awsdemo;
 
-import example.awsdemo.common.aws.redis.RedisClientTx;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import java.time.Duration;
 
 
 @Component
 public class SpringRunner implements CommandLineRunner {
 
     @Autowired
-    RedisClientTx redisClientTx;
+    Function function;
 
     @Override
     public void run(String... args) {
         System.out.println("hello");
 
-        System.out.println(redisClientTx.getFilePath("test"));
+        System.out.println(function.getTx("test"));
+        System.out.println(function.getMaster("test"));
+        System.out.println(function.getMaster2("test"));
+
 
         System.exit(0);
     }

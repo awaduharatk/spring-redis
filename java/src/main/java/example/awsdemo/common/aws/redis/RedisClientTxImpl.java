@@ -18,10 +18,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.Data;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@Slf4j
 @EnableSpringConfigured
 public class RedisClientTxImpl implements RedisClientTx {
 
